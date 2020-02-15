@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secret Share</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+
+    <h1>Secret Share</h1>
+
+    {% if error %}
+        <p>{{ error }}</p>
+    {% else %}
+        {% if secret %}
+            <p>Your secret is: {{ secret }}</p>
+        {% else %}
+            {% if link %}
+                <p>The link to your secret is : {{ link }}</p>
+            {% else %}
+                <form action="http://localhost:5000/sharesecret" method="post">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Input Your Secret Here:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="secret"></textarea>
+                    <input type="submit">
+                  </div>
+                </form>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+</body>
+</html>
