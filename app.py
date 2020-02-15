@@ -14,7 +14,7 @@ def index():
 
 
 def generateLink(key):
-    return 'http://localhost:5000/' + 'getsecret/' + key.decode()
+    return '/getsecret/' + key.decode()
 
 
 @app.route('/sharesecret', methods=['POST'])

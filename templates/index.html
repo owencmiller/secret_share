@@ -19,7 +19,7 @@
             {% if link %}
                 <p>The link to your secret is : {{ link }}</p>
             {% else %}
-                <form action="http://localhost:5000/sharesecret" method="post">
+                <form action="/sharesecret" method="post">
                   <div class="form-group">
                     <label for="exampleFormControlTextarea1">Input Your Secret Here:</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="secret"></textarea>
