@@ -11,14 +11,28 @@ body {
 }
 
 h1 {
+    font-size: 7vh;
+    margin-bottom: 10px;
+}
 
+#slogan{
+    font-size: 1.75vh;
+    margin-bottom: 7vh;
+    margin-top: 0;
 }
 
 a {
     color: cyan;
-
 }
 
-p {
+input {
+    width: 20vh;
+    height: 4vh;
+    border-radius: 8px;
+}
 
+textarea {
+    margin: 1em 0;
+    width: 60vh;
+    height: 12vh;
 }

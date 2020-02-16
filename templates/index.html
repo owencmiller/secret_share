@@ -14,17 +14,20 @@
         <p>{{ error }}</p>
     {% else %}
         {% if secret %}
-            <p>Your secret is: {{ secret }}</p>
+            <p>Your secret is<br />: {{ secret }}</p>
         {% else %}
+            <p id="slogan">A website for securely sharing secrets.</p>
             {% if link %}
                 <p>The link to your secret is : <br /><a href={{ link }}>{{ link }}</a></p>
             {% else %}
+                <br/>
                 <form action="/sharesecret" method="post">
                   <div class="form-group">
                     <label for="exampleFormControlTextarea1">Input Your Secret Here:</label>
                       <br />
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="secret"></textarea>
-                    <input type="submit">
+                      <br />
+                    <input type="submit" value="Submit Secret">
                   </div>
                 </form>
             {% endif %}
